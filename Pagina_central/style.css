@@ -16,7 +16,7 @@ body {
 /* --- Menu Lateral (Sidebar) --- */
 .sidebar {
     width: 250px;
-    background: #13cae2;
+    background: #1c4c7d;
     background-size: cover;
     background-blend-mode: multiply; /* Mistura a cor azul com a imagem */
     color: white;
@@ -28,7 +28,7 @@ body {
 
 .sidebar-header {
     text-align: center;
-    background-color: #fff; /* Fundo branco */
+    background-color: #1c4c7d; /* Fundo branco */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
     
     height: 60px;
@@ -36,15 +36,13 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    /* Cor do texto para contrastar com o fundo branco */
-    color: #0c1e35; 
     border-right: 1px solid #e0e0e0; 
 }
 
 /* Campo de Busca no Menu */
 .sidebar-search {
     position: relative;
-    background-color: #fff; /* Fundo branco */
+    background-color: #1c4c7d; /* Fundo branco */
     box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Sombra mais sutil */
     padding: 10px 20px; /* Ajusta o padding */
     margin-bottom: 10px; /* Um pequeno espaço abaixo da busca */
@@ -54,18 +52,18 @@ body {
     padding: 10px 10px 10px 35px;
     border-radius: 20px;
     border: none;
-    color: #333; /* Cor do texto digitado */
-    background-color: #f0f2f5; /* Fundo cinza claro para o input */
+    color: #000000; /* Cor do texto digitado */
+    background-color: #ffffff; /* Fundo cinza claro para o input */
 }
 .sidebar-search input::placeholder {
-    color: #888; /* Cor do placeholder */
+    color: #000000; /* Cor do placeholder */
 }
 .sidebar-search .fa-search {
     position: absolute;
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
-    color: #888; /* Cor do ícone de busca */
+    color: #000000; /* Cor do ícone de busca */
 }
 
 .sidebar ul {
@@ -385,5 +383,5 @@ body.sidebar-collapsed .sidebar {
 .sidebar-header h3 {
     margin: 0; /* Remove a margem do <h3> */
     font-size: 1.2rem; /* Deixa o tamanho da fonte igual ao "Painel Central" */
-    color: #0c1e35; /* texto MonitorPrint ficar visível */
+    color: #ffffff; /* texto MonitorPrint ficar visível */
 }
