@@ -385,3 +385,10 @@ body.sidebar-collapsed .sidebar {
     font-size: 1.2rem; /* Deixa o tamanho da fonte igual ao "Painel Central" */
     color: #ffffff; /* texto MonitorPrint ficar visível */
 }
+
+.logoCentral {
+    width: 120px;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
