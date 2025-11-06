@@ -78,4 +78,30 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Erro: Botão .menu-toggle não foi encontrado.");
     }
 
+// --- 3. LÓGICA DO MENU DE PERFIL (DROPDOWN) ---
+
+// Pega o botão (ícone) e o conteúdo (dropdown)
+const profileBtn = document.getElementById("profile-icon-btn");
+const profileDropdown = document.getElementById("profile-dropdown-content");
+
+// Adiciona o evento de CLIQUE no ícone
+profileBtn.addEventListener("click", function(event) {
+    // Impede que o clique "vaze" para a janela (necessário para o passo 2)
+    event.stopPropagation();
+    
+    // Adiciona ou remove a classe "show" do menu
+    profileDropdown.classList.toggle("show");
+});
+
+// Passo 2: Fecha o menu se o usuário clicar FORA dele
+window.addEventListener("click", function(event) {
+    // Verifica se o clique NÃO foi no dropdown
+    if (!profileDropdown.contains(event.target)) {
+        // E se o menu ESTÁ aberto (contém a classe 'show')
+        if (profileDropdown.classList.contains("show")) {
+            // Então, remove a classe 'show' (fecha o menu)
+            profileDropdown.classList.remove("show");
+        }
+    }
+});
 });
