@@ -321,11 +321,11 @@ body.sidebar-collapsed .sidebar {
     text-align: right;
 }
 
-/* Limita a altura máxima do widget do gráfico */
 .sales-chart {
-    max-height: 400px;
-    min-height: 400px;
+    max-height: 400px; 
+    min-height: 350px; 
     padding-bottom: 40px;
+    min-width: 0; /* <-- Adicione esta linha */
 }
 
 /* --- Estilos para o Widget de Log de Erros --- */
@@ -387,8 +387,8 @@ body.sidebar-collapsed .sidebar {
 }
 
 .logoCentral {
-    width: 120px;
+    width: 240px;
     height: auto;
-    max-height: 200px;
+    max-height: 87px;
     object-fit: contain;
 }
