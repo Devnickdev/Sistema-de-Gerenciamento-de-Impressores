@@ -1,448 +1,519 @@
 /* --- Reset Básico e Fontes --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    display: flex;
-    background-color: #f0f2f5;
-    height: 100vh;
-    overflow-x: hidden;
+  display: flex;
+  background-color: #f0f2f5;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 /* --- Menu Lateral (Sidebar) --- */
 .sidebar {
-    width: 250px;
-    background: #1c4c7d;
-    background-size: cover;
-    background-blend-mode: multiply; /* Mistura a cor azul com a imagem */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    transition: margin-left 0.3s ease;
+  width: 250px;
+  background: #1c4c7d;
+  background-size: cover;
+  background-blend-mode: multiply;
+  /* Mistura a cor azul com a imagem */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: margin-left 0.3s ease;
 }
 
 .sidebar-header {
-    text-align: center;
-    background-color: #1c4c7d; /* Fundo branco */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-    
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    border-right: 1px solid #e0e0e0; 
+  text-align: center;
+  background-color: #1c4c7d;
+  /* Fundo branco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-right: 1px solid #e0e0e0;
 }
 
 /* Campo de Busca no Menu */
 .sidebar-search {
-    position: relative;
-    background-color: #1c4c7d; /* Fundo branco */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Sombra mais sutil */
-    padding: 10px 20px; /* Ajusta o padding */
-    margin-bottom: 10px; /* Um pequeno espaço abaixo da busca */
+  position: relative;
+  background-color: #1c4c7d;
+  /* Fundo branco */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* Sombra mais sutil */
+  padding: 10px 20px;
+  /* Ajusta o padding */
+  margin-bottom: 10px;
+  /* Um pequeno espaço abaixo da busca */
 }
+
 .sidebar-search input {
-    width: 100%;
-    padding: 10px 10px 10px 35px;
-    border-radius: 20px;
-    border: none;
-    color: #000000; /* Cor do texto digitado */
-    background-color: #ffffff; /* Fundo cinza claro para o input */
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border-radius: 20px;
+  border: none;
+  color: #000000;
+  /* Cor do texto digitado */
+  background-color: #ffffff;
+  /* Fundo cinza claro para o input */
 }
+
 .sidebar-search input::placeholder {
-    color: #000000; /* Cor do placeholder */
+  color: #000000;
+  /* Cor do placeholder */
 }
+
 .sidebar-search .fa-search {
-    position: absolute;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #000000; /* Cor do ícone de busca */
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+  /* Cor do ícone de busca */
 }
 
 .sidebar ul {
-    list-style: none;
-    flex-grow: 1; /* Faz a lista crescer */
+  list-style: none;
+  flex-grow: 1;
+  /* Faz a lista crescer */
 }
 
 .sidebar ul li {
-    padding: 15px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar ul li.active,
 .sidebar ul li:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
 }
 
 .sidebar ul li a i {
-    margin-right: 10px;
-    width: 20px;
-    text-align: center;
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
 }
 
 /* --- Conteúdo Principal --- */
 .main-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 /* --- Cabeçalho Superior --- */
 .top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    flex-shrink: 0;
-    height: 60px; /* Altura fixa (igual ao sidebar-header) */
-    padding: 0 20px; /* Remove padding vertical */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+  height: 60px;
+  /* Altura fixa (igual ao sidebar-header) */
+  padding: 0 20px;
+  /* Remove padding vertical */
 }
 
 .top-header .header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .top-header .menu-toggle {
-    cursor: pointer;
-    font-size: 1.4rem;
+  cursor: pointer;
+  font-size: 1.4rem;
 }
 
 .top-header .header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 0.9rem;
-    color: #555;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .top-header .header-right i {
-    font-size: 1.3rem;
-    cursor: pointer;
-    color: #777;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #777;
 }
 
 /* --- Cards de Estatísticas --- */
 .stats-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card {
-    flex: 1;
-    min-width: 220px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  flex: 1;
+  min-width: 220px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .card-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 5px;
+  font-size: 2.2rem;
+  margin-bottom: 5px;
 }
+
 .card-content p {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+
 .card-content span {
-    font-size: 0.8rem;
-    opacity: 0.9;
+  font-size: 0.8rem;
+  opacity: 0.9;
 }
 
 .card-icon {
-    font-size: 3.5rem;
-    opacity: 0.3;
+  font-size: 3.5rem;
+  opacity: 0.3;
 }
 
 /* Cores dos Cards */
-.card-blue { background-color: #007bff; }
-.card-orange { background-color: #fd7e14; }
-.card-green { background-color: #28a745; }
-.card-red { background-color: #dc3545; }
+.card-blue {
+  background-color: #007bff;
+}
 
+.card-orange {
+  background-color: #fd7e14;
+}
+
+.card-green {
+  background-color: #28a745;
+}
+
+.card-red {
+  background-color: #dc3545;
+}
 
 /* --- Widgets de Dados (Grid) --- */
 .data-widgets {
-    padding: 0 20px 20px 20px;
-    display: grid;
-    /* Colunas: 1 parte, 2 partes, 1 parte */
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+  padding: 0 20px 20px 20px;
+  display: grid;
+  /* Colunas: 1 parte, 2 partes, 1 parte */
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
 }
 
 .widget {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .widget h3 {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    font-size: 1rem;
-    color: #333;
-    font-weight: bold;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
 }
 
 /* Lista de Clientes */
-.client-list ul { list-style: none; }
-.client-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    border-bottom: 1px dashed #eee;
-}
-.client-list li:last-child { border-bottom: none; }
-.client-list li .status-ok {
-    background-color: #28a745;
-    color: white;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: bold;
+.client-list ul {
+  list-style: none;
 }
 
+.client-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed #eee;
+}
+
+.client-list li:last-child {
+  border-bottom: none;
+}
+
+.client-list li .status-ok {
+  background-color: #28a745;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
 
 /* --- CSS para o Menu "Encolhido" --- */
 body.sidebar-collapsed .sidebar {
-    margin-left: -250px; /* Esconde o menu para a esquerda */
+  margin-left: -250px;
+  /* Esconde o menu para a esquerda */
 }
 
 /* --- Estilos para o Widget de Status da Impressora --- */
 
 /* Remove o estilo antigo da lista de clientes, se houver */
-.client-list ul, .client-list li {
-    /* Pode deixar em branco ou remover regras antigas se existirem */
-    border: none;
-    padding: 0;
+.client-list ul,
+.client-list li {
+  /* Pode deixar em branco ou remover regras antigas se existirem */
+  border: none;
+  padding: 0;
 }
 
 /* Novo estilo para a lista de impressoras */
 .printer-status-list ul {
-    list-style: none;
+  list-style: none;
 }
 
 .printer-status-list li {
-    display: flex;
-    align-items: center;
-    padding: 12px 5px;
-    font-size: 0.9rem;
-    border-bottom: 1px dashed #eee;
+  display: flex;
+  align-items: center;
+  padding: 12px 5px;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed #eee;
 }
+
 .printer-status-list li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 /* Ponto de Status (Online/Offline) */
 .status-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 10px;
-    flex-shrink: 0; /* Impede que o ponto encolha */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+  /* Impede que o ponto encolha */
 }
+
 .status-dot.online {
-    background-color: #28a745; /* Verde */
+  background-color: #28a745;
+  /* Verde */
 }
+
 .status-dot.warning {
-    background-color: #fd7e14; /* Laranja */
+  background-color: #fd7e14;
+  /* Laranja */
 }
+
 .status-dot.offline {
-    background-color: #dc3545; /* Vermelho */
+  background-color: #dc3545;
+  /* Vermelho */
 }
 
 /* Nome da Impressora */
 .printer-name {
-    flex-grow: 1; /* Faz o nome ocupar o espaço */
-    font-weight: 500;
-    color: #333;
+  flex-grow: 1;
+  /* Faz o nome ocupar o espaço */
+  font-weight: 500;
+  color: #333;
 }
 
 /* Barra de Progresso (Toner) */
 .progress-bar-container {
-    width: 100px;
-    height: 8px;
-    background-color: #e9ecef;
-    border-radius: 5px;
-    margin: 0 10px;
-    overflow: hidden; /* Garante que a barra interna fique contida */
+  width: 100px;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+  /* Garante que a barra interna fique contida */
 }
+
 .progress-bar {
-    height: 100%;
-    background-color: #007bff; /* Azul */
-    border-radius: 5px;
+  height: 100%;
+  background-color: #007bff;
+  /* Azul */
+  border-radius: 5px;
 }
+
 /* Muda a cor da barra se estiver baixa (ex: 20%) */
 .progress-bar[style*="20%"],
 .progress-bar[style*="10%"],
 .progress-bar[style*="0%"] {
-    background-color: #fd7e14; /* Laranja */
+  background-color: #fd7e14;
+  /* Laranja */
 }
-
 
 /* Texto do Status */
 .status-text {
-    font-size: 0.8rem;
-    color: #555;
-    width: 80px; /* Alinha o texto da direita */
-    text-align: right;
+  font-size: 0.8rem;
+  color: #555;
+  width: 80px;
+  /* Alinha o texto da direita */
+  text-align: right;
 }
 
 .sales-chart {
-    max-height: 400px; 
-    min-height: 350px; 
-    padding-bottom: 40px;
-    min-width: 0;
+  max-height: 400px;
+  min-height: 350px;
+  padding-bottom: 40px;
+  min-width: 0;
 }
 
 /* --- Estilos para o Widget de Log de Erros --- */
 
 .error-log-list ul {
-    list-style: none;
-    /* Adiciona uma barra de rolagem se a lista for muito grande */
-    max-height: 250px; 
-    overflow-y: auto;
+  list-style: none;
+  /* Adiciona uma barra de rolagem se a lista for muito grande */
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .error-log-list li {
-    display: flex;
-    align-items: center;
-    padding: 10px 5px;
-    font-size: 0.9rem;
-    border-bottom: 1px dashed #eee;
-    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed #eee;
+  flex-wrap: wrap;
+  /* Permite quebra de linha em telas pequenas */
 }
+
 .error-log-list li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 /* Ícone do Log (com cores) */
 .log-icon {
-    margin-right: 10px;
-    font-size: 1rem;
-    width: 20px; /* Alinha os ícones */
-    text-align: center;
+  margin-right: 10px;
+  font-size: 1rem;
+  width: 20px;
+  /* Alinha os ícones */
+  text-align: center;
 }
+
 .log-icon.error {
-    color: #dc3545; /* Vermelho */
+  color: #dc3545;
+  /* Vermelho */
 }
+
 .log-icon.warning {
-    color: #fd7e14; /* Laranja */
+  color: #fd7e14;
+  /* Laranja */
 }
+
 .log-icon.offline {
-    color: #6c757d; /* Cinza */
+  color: #6c757d;
+  /* Cinza */
 }
 
 /* Textos do Log */
 .log-time {
-    color: #6c757d;
-    font-size: 0.8rem;
-    margin-right: 8px;
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin-right: 8px;
 }
+
 .log-printer {
-    color: #333;
-    margin-right: 5px;
+  color: #333;
+  margin-right: 5px;
 }
+
 .log-message {
-    color: #555;
+  color: #555;
 }
 
 .sidebar-header h3 {
-    margin: 0; /* Remove a margem do <h3> */
-    font-size: 1.2rem; /* Deixa o tamanho da fonte igual ao "Painel Central" */
-    color: #ffffff; /* texto MonitorPrint ficar visível */
+  margin: 0;
+  /* Remove a margem do <h3> */
+  font-size: 1.2rem;
+  /* Deixa o tamanho da fonte igual ao "Painel Central" */
+  color: #ffffff;
+  /* texto MonitorPrint ficar visível */
 }
 
 .logoCentral {
-    width: 240px;
-    height: auto;
-    max-height: 87px;
-    object-fit: contain;
+  width: 240px;
+  height: auto;
+  max-height: 87px;
+  object-fit: contain;
 }
 
 /* --- Estilos do Menu Dropdown de Perfil --- */
 
 /* 1. O "container" do ícone e do menu */
 .profile-menu {
-    position: relative; /* Essencial para o menu dropdown */
-    display: inline-block;
+  position: relative;
+  /* Essencial para o menu dropdown */
+  display: inline-block;
 }
 
 /* 2. O ícone de usuário agora é clicável */
 #profile-icon-btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* 3. O menu dropdown (ESCONDIDO por padrão) */
 .profile-dropdown {
-    display: none; /* Escondido! O JS vai mudar isso */
-    position: absolute;
-    top: 40px; /* Posição abaixo do ícone */
-    right: 0; /* Alinhado à direita */
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    z-index: 100; /* Garante que fique na frente de tudo */
+  display: none;
+  /* Escondido! O JS vai mudar isso */
+  position: absolute;
+  top: 40px;
+  /* Posição abaixo do ícone */
+  right: 0;
+  /* Alinhado à direita */
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 100;
+  /* Garante que fique na frente de tudo */
 }
 
 /* 4. O nome do usuário (Administrador) */
 .profile-dropdown h4 {
-    color: #333;
-    padding: 12px 16px;
-    margin: 0;
-    border-bottom: 1px solid #eee;
-    font-size: 1rem;
+  color: #333;
+  padding: 12px 16px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
 }
 
 /* 5. Os links (Configurações, Sair) */
 .profile-dropdown a {
-    color: #555;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 0.9rem;
+  color: #555;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
 }
 
 /* 6. Efeito hover nos links */
 .profile-dropdown a:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /* 7. A CLASSE MÁGICA: O JS vai adicionar esta classe */
 .profile-dropdown.show {
-    display: block; /* Mostra o menu */
+  display: block;
+  /* Mostra o menu */
 }
